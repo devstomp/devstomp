@@ -1,0 +1,42 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block html_attribs %} lang="en"{% endblock %}
+
+{% block metas %}
+  {{ super() }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock %}
+
+
+{% block styles %}
+
+  {{ super() }}
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    
+{% endblock%}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+<!-- Body Begins Here! -->
+{% block body %}
+  
+      <div class="container-fluid">
+          <!-- Jinja Templating Starts Here -->
+          {% block content %}{% endblock %}
+      </div>
+
+
+  {% block scripts %}
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+  {{super()}}
+
+  {% endblock %}
+
+{% endblock %}
