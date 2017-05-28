@@ -15,7 +15,6 @@
 
   {{ super() }}
     <!-- Custom CSS -->
-<<<<<<< HEAD
     <link href="{{ url_for('static', filename='assets/style.css') }}" rel="stylesheet">
     
     <!-- Google Fonts -->
@@ -23,10 +22,8 @@
     
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-=======
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
     
->>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22
 {% endblock%}
 
 {% block title %}
@@ -72,12 +69,7 @@
       </div>
       <!-- /.container -->
     </nav>
-    {% endblock %}
-
-=======
-<!-- Body Begins Here! -->
-{% block body %}
->>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22
+{% endblock %}
   
       <div class="container-fluid">
           <!-- Jinja Templating Starts Here -->
@@ -86,11 +78,9 @@
 
 
   {% block scripts %}
-<<<<<<< HEAD
+
   <script src="{{ url_for('static', filename='assets/main.js') }}"></script>
-=======
   <script src="{{ url_for('static', filename='main.js') }}"></script>
->>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22
 
   {{super()}}
 
