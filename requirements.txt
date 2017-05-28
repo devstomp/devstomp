@@ -12,8 +12,11 @@ Flask-Bootstrap==3.3.7.1
 Flask-Firebase==1.1
 Flask-Login==0.4.0
 Flask-SQLAlchemy==2.2
+<<<<<<< HEAD
 Flask-WTF==0.14.2
 gunicorn==19.7.1
+=======
+>>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22
 idna==2.5
 ipaddress==1.0.18
 itsdangerous==0.24
@@ -32,4 +35,7 @@ SQLAlchemy==1.1.10
 urllib3==1.21.1
 visitor==0.1.3
 Werkzeug==0.12.2
+<<<<<<< HEAD
 WTForms==2.1
+=======
+>>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22

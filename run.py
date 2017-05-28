@@ -2,15 +2,21 @@
 
 from app import app
 from config import *
+<<<<<<< HEAD
 from app.forms import LoginForm, SignupForm
 from flask import render_template, redirect, url_for, flash, request, session
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
+=======
+from flask import render_template, redirect, url_for, flash, request, session
+from flask_login import LoginManager, UserMixin, login_user, logout_user
+>>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22
 from flask_sqlalchemy import SQLAlchemy
 
 import pkg_resources
 import os, requests
 from datetime import datetime
 
+<<<<<<< HEAD
 login_manager = LoginManager(app)
 login_manager.login_view = "index"
 
@@ -54,6 +60,13 @@ def logout():
     session['logged_in'] = False
     return redirect(url_for('index'))
 
+=======
+app.secret_key = os.urandom(128)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+>>>>>>> e383dc1bb08aa4a09680014044b91f3e6220ae22
 
 if __name__ == '__main__':
     app.run(debug=True)
