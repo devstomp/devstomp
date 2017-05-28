@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Rubik', sans-serif;
+}
+
+nav {
+  border: none !important;
+}
+
+ul.links li{
+  display: block;
+}
+
+ul.links a {
+  color: #333;
+}

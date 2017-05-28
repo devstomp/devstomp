@@ -1,0 +1,57 @@
+/*!
+ * Start Bootstrap - Modern Business (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+header.full-page {
+    background: #000 no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    padding-bottom: 25em;
+}
+
+header.full-page h1 {
+  text-align: center;
+  color: white;
+  padding-top: 3em;
+  font-size: 500% !important;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+
+header.full-page hr {
+  width: 30%;
+  padding-bottom: 3px !important;
+  color: white;
+}
+
+ul.header-icons li {
+  display: inline-block;
+  padding-right: 2.5em;
+}
+
+ul.header-icons li:nth-child(0) {
+  padding-right: 0;
+}
+
+ul.header-icons i {
+  color: white;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
