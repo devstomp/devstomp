@@ -1,0 +1,138 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %} 
+
+{% block html_attribs %} lang="en"{% endblock %}
+
+{% block metas %}
+  {{ super() }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock %}
+
+
+{% block styles %}
+
+  {{ super() }}
+  
+  <!-- Custom CSS -->
+  <link href="{{ url_for('static', filename='assets/style1.css')}}" rel="stylesheet">
+  
+  <!-- Google Fonts - Open Sans -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+  
+  <!-- Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    
+{% endblock%}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+  
+
+<!-- Body Begins Here! -->
+{% block body %}
+    
+  {% block navbar%}
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+
+    <!-- Header Carousel -->
+    <header class="full-page">
+      <div class="container text-center">
+        <h1>devstomp</h1>
+        <hr />
+        <ul class="header-icons">
+          <li>
+            <i class="fa fa-code fa-3x"></i>
+          </li>
+          <li>
+            <i class="fa fa-heart fa-3x"></i>
+          </li>
+          <li>
+            <i class="fa fa-users fa-3x"></i>
+          </li>
+          <li>
+            <i class="fa fa-share-square-o fa-3x"></i>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <br />
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <span><h4>Login</h4></span>
+                    </div>
+                    <div class="panel-body">
+                      <form method="POST" id="login-form">
+                        <div class="form-group">
+                          {{ form.csrf_token }}
+                          {{ wtf.form_field(form.username )}}
+                          {{ wtf.form_field(form.password )}}
+                          <button type="submit" class="btn btn-default">Login </button>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <span><h4>Signup</h4></span>
+                    </div>
+                    <div class="panel-body">
+                      <form method="POST" id="signup-form">
+                        <div class="form-group">
+
+                          <button type="submit" class="btn btn-default">Signup </button>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+
+      
+        {% block footer%}
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        {% endblock %}
+
+    </div>
+    <!-- /.container -->
+    
+    {% block scripts %}
+    
+
+      {{super()}}
+
+    {% endblock %}
+
+
+{% endblock %}

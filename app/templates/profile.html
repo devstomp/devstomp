@@ -1,0 +1,53 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-4 text-center">
+    <img class="img-circle" src="http://placehold.it/350x350" width="200px"/>
+    <h2>Hello, my name is {{ user }} !</h2>
+    <h3>devstomp site: </h3>
+    <hr />
+    <h3>Here's a little <b> about me: </b></h3>
+    <p style="text-align:justify">
+      {{ description }}
+    </p>
+  </div>
+  <div class="col-md-6">
+    <h4>Here are my <b>skills</b> and <b>specialties:</b></h4>
+    <p>
+      {{ skills }}
+    </p>
+    <hr />
+  </div>
+  <div class="col-md-3">
+    <h4><b>My links:</b></h4>
+    <ul class="links">
+      <li>
+        <p><i class="fa fa-github"></i><a href=""> Github</a></p>
+      </li>
+      <li>
+        <p><i class="fa fa-twitter"></i><a href=""> Twitter</a></p>
+      </li>
+      <li>
+        <p><i class="fa fa-linkedin"></i><a href=""> Linkedin</a></p>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <h4><b>My favorite books:</b></h4>
+    <ul class="links">
+      
+    </ul>
+  </div>
+  <div class="col-md-8 col-md-offset-4">
+    <h3>Projects:</h3>
+    <hr />
+  </div>
+  <div class="col-md-8 col-md-offset-4">
+    <h3>Code Snippets:</h3>
+    <hr />
+  </div>
+
+
+
+{% endblock %}
